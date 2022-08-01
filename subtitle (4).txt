@@ -1,0 +1,76 @@
+Welcome to again, introduction
+to Git and GitHub. It's very basic. If you have absolutely no clue, then this is for you. Otherwise it's maybe boring. I'm just telling you
+how I'm using Git, and I am able to survive in most of the
+cases with that knowledge. Sometimes I have to read the documentation for
+a more advanced stuff, but in let's say, 80
+percent of the cases that I will tell you
+now is sufficient. Let's actually
+start using GitHub. It makes things a bit more easy. There's also competition
+to GitHub. This is GitLab. GitLab is particular
+interesting because the whole system behind
+GitLab is open-source. This is a hosted version, but you can have the
+whole system on-prem, and also purchase
+support from GitLab. Those guys are partially in Berlin, so they are pretty cool. Anyway, let's start
+with GitHub here. What I will do now is
+create a repository. A repository is the location
+where your stuff goes into. Let's call it, I don't know, demo, and we can choose whether we want to create a public or a private repository. That repository is remote, that's hosted at GitHub, and let's initialize
+with a README. Let's skip gitignore for now, I will show you that later. We create now repository. Once this is created, it's very easy to have a copy
+of this repository locally. There are two options: one is cloning it via HTTPS or via SSH. I'm always using SSH, it just to make things
+a bit more easy. The only thing you need
+to do is you have to add your public identity to GitHub. I can show you that later. Now, the only thing we need to do is we go to empty folder, and then we say git
+clone, and this link. What now happens is the contents of this is copied to my machine. Here, I have to specify my
+password for my SSH identity, so that's something I need
+to explain you later. If you know, go to demo. You will see here
+the README file, and you see here there is
+content of the README file. Now, let's add a file. You see here there's only the
+README, and the.git folder. Please never ever touch it. Let's create another file. Let's say, vi test.txt, and hello, this is a test. Now, we add this to the repo. First of all, we say
+git add test.txt. Now, if we say now git status, then we see that this file is now in the so-called
+staging area. That's something in-between
+your local folder and your local repository. You have a local folder
+with the contents, you have a local repository, and you have a remote repository. Personally, you work with
+your local repository, and all the other guys
+working together with you are working also with
+their local repositories, and do sync all your contents
+with the remote repository. Now, we want to commit or
+let's do something else. Let's say, we create
+a file test2, and we say git add test2.txt. Now interestingly, if
+we now say git status, those are both in
+the staging area. Now, if we say git commit, and we say message
+initial commit, and that is now in our local
+repository on this machine. The idea is why you
+have the staging area, you can control which files go into a commit
+because let's say, the atomic entity here
+in git is a commit, so everything is around
+beat on the commit. You can yet definitely control which files are going
+into a single commit. Now, what you want to
+do is you want to push the contents of your local repository
+to remote repository. Because if you now
+go to this here, to this GitHub project, you see that there is
+no additional file. We say now, git push. What now happens is, I again have to
+provide a password. I don't have the key
+agent that running. Now, you see here
+we have committed this local change in the local repository
+to remote repository. Now, you can see that you
+have these two files here. If you click on that "File", you'll see first of
+all the content, and also you'll see
+here which commit was responsible for
+adding this file. Another interesting thing is if you are starting from scratch, you can also do the
+following: Now, let's delete this project, and this is a bit hard. Just to make sure you don't
+do that accidentally, so delete this repository, and you have to say demo here, although I think you have to
+type the whole thing here. Now, this project is deleted. Let's do something else. Let's create a new repository, but now let's init a
+repository on my machine. Let's call it demo again. We don't initialize
+it with a README. We say create repository. If you're lucky, GitHub will show us how to do it. Yeah, here. Let's actually do it ourselves. Let's get rid of the demo folder, and let's create it again. Now, do what they tell us. We create a README, and let me say, git init. Now, we have it
+initialized because now we have the.git folder which
+you never ever should touch. We say git add README, but we can also say git add., so it's adding everything
+which was in our folder. It's only the README.md, and then we say, git commit as usual,
+test or whatever. Now, we can't say git push now. If we say git push, it doesn't know where to push it because actually we haven't told this local
+folder that it should connect to remote repository. That we do with git
+remote add origin, and that's the URL
+of our project. Then we can say git
+push u origin master, and that's basically it. We have to re-enter the
+password for my RSA key, and if you're lucky, and everything worked fine, we can now go to the project, and we should see
+the README file, which is the case. That's it for now.
+That's the first part. In the next video, I will
+show you how to do branches, and actually also how to
+create a pull request. Thanks for watching,
+and see you later.
